@@ -10,15 +10,20 @@ export interface Manipulator {
   to?: To[];
   to_after_key_up?: To[];
   to_if_alone?: To[];
+  to_if_held_down?: To[];
+  to_delayed_action?: ToDelayedAction;
   parameters?: Parameters;
   conditions?: Conditions[];
 }
 
 export interface Parameters {
   "basic.simultaneous_threshold_milliseconds"?: number;
+  "basic.to_delayed_action_delay_milliseconds"?: number;
+  "basic.to_if_alone_timeout_milliseconds"?: number;
+  "basic.to_if_held_down_threshold_milliseconds"?: number;
 }
 
-type Conditions =
+export type Conditions =
   | FrontMostApplicationCondition
   | DeviceCondition
   | KeybaordTypeCondition
@@ -134,6 +139,7 @@ export interface To {
     name: string;
     value: boolean | number | string;
   };
+  lazy?: boolean;
   mouse_key?: MouseKey;
   pointing_button?: string;
   /**
@@ -142,6 +148,11 @@ export interface To {
    * @see: {@link https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/to/software_function/iokit_power_management_sleep_system/}
    */
   software_function?: SoftwareFunction;
+}
+
+export interface ToDelayedAction {
+  to_if_invoked?: To[];
+  to_if_canceled?: To[];
 }
 
 export interface MouseKey {

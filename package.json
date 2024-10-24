@@ -12,6 +12,6 @@
   },
   "scripts": {
     "build": "tsm rules.ts",
-    "watch": "nodemon --exec yarn build -e ts"
+    "watch": "nodemon --exec 'yarn build && ln -sf /Users/hormoz/d/karabiner/karabiner.json /Users/hormoz/.config/karabiner/karabiner.json' -e ts"
   }
 }
