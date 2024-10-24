@@ -76,6 +76,14 @@
                     }
                   },
                   {
+                    "key_code": "7",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  },
+                  {
                     "key_code": "left_shift"
                   }
                 ],
@@ -85,6 +93,14 @@
                       "name": "ableton_typing_mode",
                       "value": 0
                     }
+                  },
+                  {
+                    "key_code": "8",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
                   }
                 ],
                 "conditions": [
@@ -125,6 +141,14 @@
                       "name": "ableton_typing_mode",
                       "value": 1
                     }
+                  },
+                  {
+                    "key_code": "7",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
                   }
                 ]
               },
@@ -152,6 +176,142 @@
                       "name": "ableton_typing_mode",
                       "value": 0
                     }
+                  },
+                  {
+                    "key_code": "8",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: typing mode escape",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "ableton_typing_mode",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "key_code": "8",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  },
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: rename",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "r",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "r",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  },
+                  {
+                    "set_variable": {
+                      "name": "ableton_typing_mode",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "7",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: end rename",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "ableton_typing_mode",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "key_code": "8",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  },
+                  {
+                    "key_code": "return_or_enter"
                   }
                 ]
               }
@@ -193,6 +353,60 @@
                       "name": "ableton_typing_mode",
                       "value": 1
                     }
+                  },
+                  {
+                    "key_code": "7",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: cmd-f",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "f",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  },
+                  {
+                    "set_variable": {
+                      "name": "ableton_typing_mode",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "7",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
                   }
                 ]
               }
@@ -230,6 +444,14 @@
                       "name": "ableton_typing_mode",
                       "value": 0
                     }
+                  },
+                  {
+                    "key_code": "8",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
                   }
                 ]
               }
@@ -420,7 +642,7 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "page_up",
+                  "key_code": "hyphen",
                   "modifiers": {
                     "mandatory": []
                   }
@@ -974,12 +1196,12 @@
             ]
           },
           {
-            "description": "ableton: create midi clip",
+            "description": "ableton: insert midi clip",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "m",
+                  "key_code": "o",
                   "modifiers": {
                     "mandatory": []
                   }
@@ -1000,6 +1222,79 @@
                 "to": [
                   {
                     "key_code": "m",
+                    "modifiers": [
+                      "left_command",
+                      "left_shift"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: new audio track",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "i",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "t",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: new midi track",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "i",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "t",
                     "modifiers": [
                       "left_command",
                       "left_shift"
@@ -1213,6 +1508,76 @@
                     "key_code": "f12",
                     "modifiers": [
                       "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: scale",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "9",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "f",
+                    "modifiers": [
+                      "left_shift"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: fold",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "0",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "g",
+                    "modifiers": [
+                      "left_shift"
                     ]
                   }
                 ]

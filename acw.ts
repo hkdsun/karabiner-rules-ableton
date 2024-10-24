@@ -1,6 +1,17 @@
 import { Key } from "readline";
 import { To, KeyCode, Conditions, Manipulator, KarabinerRules, Modifiers } from "./types";
 
+export const activateTypingMode: To[] = [
+  { set_variable: { name: "ableton_typing_mode", value: 1 } },
+  { key_code: "7", modifiers: ["left_command", "left_option", "left_control"] },
+];
+
+export const deactivateTypingMode: To[] = [
+  { set_variable: { name: "ableton_typing_mode", value: 0 } },
+  { key_code: "8", modifiers: ["left_command", "left_option", "left_control"] },
+];
+
+
 export function abletonHoldTypingMode(): Manipulator[] {
   return [{
     type: "basic",
@@ -8,11 +19,11 @@ export function abletonHoldTypingMode(): Manipulator[] {
       key_code: "left_shift",
     },
     to: [
-      { set_variable: { name: "ableton_typing_mode", value: 1 } },
+      ...activateTypingMode,
       { key_code: "left_shift" },
     ], 
     to_after_key_up: [
-      { set_variable: { name: "ableton_typing_mode", value: 0 } },
+      ...deactivateTypingMode,
     ],
     conditions: [
       {
@@ -41,7 +52,7 @@ export function abletonToggleTypingMode(): Manipulator[] {
       }
     ],
     to_if_alone: [
-      { set_variable: { name: "ableton_typing_mode", value: 1 } },
+      ...activateTypingMode,
     ],
   },
   {
@@ -61,7 +72,7 @@ export function abletonToggleTypingMode(): Manipulator[] {
       }
     ],
     to_if_alone: [
-      { set_variable: { name: "ableton_typing_mode", value: 0 } },
+      ...deactivateTypingMode,
     ],
   }]
 }
