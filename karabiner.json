@@ -31,6 +31,325 @@
             ]
           },
           {
+            "description": "bidule: rename",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "r",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.plogue.bidule"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "f2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "bidule: delete",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "d",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.plogue.bidule"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "delete_forward"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "bidule: delete (option-d)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "d",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.plogue.bidule"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "d"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_4",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_4",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": {
+                      "vendor_id": 14,
+                      "product_id": 13330
+                    }
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_6",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_6",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": {
+                      "vendor_id": 14,
+                      "product_id": 13330
+                    }
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_8",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_8",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": {
+                      "vendor_id": 14,
+                      "product_id": 13330
+                    }
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_2",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_2",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": {
+                      "vendor_id": 14,
+                      "product_id": 13330
+                    }
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_7",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_7",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": {
+                      "vendor_id": 14,
+                      "product_id": 13330
+                    }
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_1",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_1",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": {
+                      "vendor_id": 14,
+                      "product_id": 13330
+                    }
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_9",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_9",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": {
+                      "vendor_id": 14,
+                      "product_id": 13330
+                    }
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_3",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_3",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": {
+                      "vendor_id": 14,
+                      "product_id": 13330
+                    }
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_5",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_5",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": {
+                      "vendor_id": 14,
+                      "product_id": 13330
+                    }
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "ableton: right_control to ableton prefix",
             "manipulators": [
               {
@@ -61,66 +380,15 @@
             ]
           },
           {
-            "description": "ableton: typing mode hold (shift)",
+            "description": "ableton: insert (enter typing mode)",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "left_shift"
-                },
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "ableton_typing_mode",
-                      "value": 1
-                    }
-                  },
-                  {
-                    "key_code": "7",
-                    "modifiers": [
-                      "left_command",
-                      "left_option",
-                      "left_control"
-                    ]
-                  },
-                  {
-                    "key_code": "left_shift"
+                  "key_code": "i",
+                  "modifiers": {
+                    "mandatory": []
                   }
-                ],
-                "to_after_key_up": [
-                  {
-                    "set_variable": {
-                      "name": "ableton_typing_mode",
-                      "value": 0
-                    }
-                  },
-                  {
-                    "key_code": "8",
-                    "modifiers": [
-                      "left_command",
-                      "left_option",
-                      "left_control"
-                    ]
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "ableton: typing mode toggle (control)",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "left_control"
                 },
                 "conditions": [
                   {
@@ -135,7 +403,7 @@
                     "value": 0
                   }
                 ],
-                "to_if_alone": [
+                "to": [
                   {
                     "set_variable": {
                       "name": "ableton_typing_mode",
@@ -151,11 +419,19 @@
                     ]
                   }
                 ]
-              },
+              }
+            ]
+          },
+          {
+            "description": "ableton: control (exits typing mode)",
+            "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "left_control"
+                  "key_code": "left_control",
+                  "modifiers": {
+                    "mandatory": []
+                  }
                 },
                 "conditions": [
                   {
@@ -163,14 +439,9 @@
                     "bundle_identifiers": [
                       "com.ableton.live"
                     ]
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "ableton_typing_mode",
-                    "value": 1
                   }
                 ],
-                "to_if_alone": [
+                "to": [
                   {
                     "set_variable": {
                       "name": "ableton_typing_mode",
@@ -184,13 +455,23 @@
                       "left_option",
                       "left_control"
                     ]
+                  },
+                  {
+                    "key_code": "left_control"
+                  },
+                  {
+                    "key_code": "5",
+                    "modifiers": [
+                      "left_command",
+                      "left_option"
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "description": "ableton: typing mode escape",
+            "description": "ableton: escape (exits typing mode)",
             "manipulators": [
               {
                 "type": "basic",
@@ -277,7 +558,7 @@
             ]
           },
           {
-            "description": "ableton: end rename",
+            "description": "ableton: enter (exits typing mode)",
             "manipulators": [
               {
                 "type": "basic",
@@ -1022,6 +1303,42 @@
             ]
           },
           {
+            "description": "ableton: returns",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "semicolon",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "r",
+                    "modifiers": [
+                      "left_command",
+                      "left_option"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "ableton: inputs",
             "manipulators": [
               {
@@ -1237,7 +1554,7 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "i",
+                  "key_code": "k",
                   "modifiers": {
                     "mandatory": []
                   }
@@ -1272,7 +1589,7 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "i",
+                  "key_code": "k",
                   "modifiers": {
                     "mandatory": [
                       "command"
@@ -1515,7 +1832,7 @@
             ]
           },
           {
-            "description": "ableton: scale",
+            "description": "ableton: fold",
             "manipulators": [
               {
                 "type": "basic",
@@ -1541,41 +1858,6 @@
                 "to": [
                   {
                     "key_code": "f",
-                    "modifiers": [
-                      "left_shift"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "ableton: fold",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "0",
-                  "modifiers": {
-                    "mandatory": []
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "ableton_typing_mode",
-                    "value": 0
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "g",
                     "modifiers": [
                       "left_shift"
                     ]
