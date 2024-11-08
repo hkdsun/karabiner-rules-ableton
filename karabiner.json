@@ -3125,6 +3125,164 @@
                 ]
               }
             ]
+          },
+          {
+            "description": "totalmix: 100%",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "1",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "de.rme-audio.TotalmixFX"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "u",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "totalmix: 135%",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "2",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "de.rme-audio.TotalmixFX"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "o",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "totalmix: hide control strip",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "3",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "de.rme-audio.TotalmixFX"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "y",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "totalmix: toggle fullscreen",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "4",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "de.rme-audio.TotalmixFX"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "4",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "totalmix: switch window",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "de.rme-audio.TotalmixFX"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "2",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": false
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
