@@ -55,6 +55,19 @@ export function toPassThroughHotKey(key_code: KeyCode): To[] {
   ];
 }
 
+
+export function toHyper(key_code: KeyCode): To[] {
+  return [{ key_code, modifiers: ["left_control", "left_option", "left_command"] }]
+}
+
+export function toSuperHyper(key_code: KeyCode, repeat?: boolean): To[] {
+  return [{ key_code, modifiers: ["left_control", "left_option", "left_command", "left_shift"], repeat: repeat ?? true },]
+}
+
+export function toCombo(arg0: To[][]): To[] {
+  return arg0.flat()
+}
+
 export function appRule(bundle_identifiers: string[], key_code: KeyCode, to: To[], modifiers: Modifiers = {}): Manipulator[] {
   var conditions: Conditions[] = [
     {
@@ -80,10 +93,38 @@ export function deviceRule(vendor_id: number, product_id: number, key_code: KeyC
   var conditions: Conditions[] = [
     {
       type: "device_if",
-      identifiers: {
-        vendor_id,
-        product_id,
+      identifiers: [{
+        vendor_id: vendor_id,
+        product_id: product_id,
+      }],
+    },
+  ];
+
+  return [
+    {
+      type: "basic",
+      from: {
+        key_code,
+        modifiers: modifiers,
       },
+      conditions: conditions,
+      to: to,
+    }
+  ];
+}
+
+export function deviceAppRule(bundle_identifiers: string[], vendor_id: number, product_id: number, key_code: KeyCode, to: To[], modifiers: Modifiers = {}): Manipulator[] {
+  var conditions: Conditions[] = [
+    {
+      type: "frontmost_application_if",
+      bundle_identifiers: bundle_identifiers,
+    },
+    {
+      type: "device_if",
+      identifiers: [{
+        vendor_id: vendor_id,
+        product_id: product_id,
+      }],
     },
   ];
 

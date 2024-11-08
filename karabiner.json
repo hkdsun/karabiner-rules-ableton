@@ -31,6 +31,32 @@
             ]
           },
           {
+            "description": "super hyper key",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_command",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_command",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "bidule: rename",
             "manipulators": [
               {
@@ -116,130 +142,490 @@
             ]
           },
           {
-            "description": "numpad: keypad_4",
+            "description": "numpad ableton: keypad_hyphen",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "keypad_4",
+                  "key_code": "keypad_hyphen",
                   "modifiers": {}
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
                     "type": "device_if",
-                    "identifiers": {
-                      "vendor_id": 14,
-                      "product_id": 13330
-                    }
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
                   }
                 ],
                 "to": [
                   {
-                    "key_code": "escape"
+                    "key_code": "w",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
+                  },
+                  {
+                    "set_variable": {
+                      "name": "ableton_typing_mode",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "key_code": "8",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad: keypad_6",
+            "description": "numpad ableton: keypad_asterisk",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "keypad_6",
+                  "key_code": "keypad_asterisk",
                   "modifiers": {}
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
                     "type": "device_if",
-                    "identifiers": {
-                      "vendor_id": 14,
-                      "product_id": 13330
-                    }
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
                   }
                 ],
                 "to": [
                   {
-                    "key_code": "escape"
+                    "key_code": "r",
+                    "modifiers": [
+                      "left_command",
+                      "left_option"
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad: keypad_8",
+            "description": "numpad ableton: keypad_slash",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "keypad_8",
+                  "key_code": "keypad_slash",
                   "modifiers": {}
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
                     "type": "device_if",
-                    "identifiers": {
-                      "vendor_id": 14,
-                      "product_id": 13330
-                    }
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
                   }
                 ],
                 "to": [
                   {
-                    "key_code": "escape"
+                    "key_code": "i",
+                    "modifiers": [
+                      "left_command",
+                      "left_option"
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad: keypad_2",
+            "description": "numpad ableton: keypad_num_lock",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "keypad_2",
+                  "key_code": "keypad_num_lock",
                   "modifiers": {}
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
                     "type": "device_if",
-                    "identifiers": {
-                      "vendor_id": 14,
-                      "product_id": 13330
-                    }
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
                   }
                 ],
                 "to": [
                   {
-                    "key_code": "escape"
+                    "key_code": "s",
+                    "modifiers": [
+                      "left_command",
+                      "left_option"
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad: keypad_7",
+            "description": "numpad ableton: keypad_plus",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "keypad_7",
+                  "key_code": "keypad_plus",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_shift"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad ableton: keypad_enter",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_enter",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "b",
+                    "modifiers": [
+                      "left_command",
+                      "left_option"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton consumer key: volume_decrement",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "consumer_key_code": "volume_decrement",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [],
+                "to": [
+                  {
+                    "key_code": "e",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton consumer key: volume_increment",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "consumer_key_code": "volume_increment",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [],
+                "to": [
+                  {
+                    "key_code": "r",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton consumer key: mute",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "consumer_key_code": "mute",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [],
+                "to": [
+                  {
+                    "key_code": "left_command"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad ableton: tab",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "h"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad ableton: delete_forward",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "delete_forward",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "spacebar"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad ableton: delete_or_backspace",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "spacebar"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_0",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_0",
                   "modifiers": {}
                 },
                 "conditions": [
                   {
                     "type": "device_if",
-                    "identifiers": {
-                      "vendor_id": 14,
-                      "product_id": 13330
-                    }
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
                   }
                 ],
                 "to": [
                   {
-                    "key_code": "escape"
+                    "key_code": "2",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_period",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_period",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "2",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
                   }
                 ]
               }
@@ -257,41 +643,53 @@
                 "conditions": [
                   {
                     "type": "device_if",
-                    "identifiers": {
-                      "vendor_id": 14,
-                      "product_id": 13330
-                    }
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
                   }
                 ],
                 "to": [
                   {
-                    "key_code": "escape"
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "left_control"
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad: keypad_9",
+            "description": "numpad: keypad_2",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "keypad_9",
+                  "key_code": "keypad_2",
                   "modifiers": {}
                 },
                 "conditions": [
                   {
                     "type": "device_if",
-                    "identifiers": {
-                      "vendor_id": 14,
-                      "product_id": 13330
-                    }
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
                   }
                 ],
                 "to": [
                   {
-                    "key_code": "escape"
+                    "key_code": "4",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
                   }
                 ]
               }
@@ -309,15 +707,53 @@
                 "conditions": [
                   {
                     "type": "device_if",
-                    "identifiers": {
-                      "vendor_id": 14,
-                      "product_id": 13330
-                    }
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
                   }
                 ],
                 "to": [
                   {
-                    "key_code": "escape"
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_4",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_4",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "h",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
                   }
                 ]
               }
@@ -335,10 +771,480 @@
                 "conditions": [
                   {
                     "type": "device_if",
-                    "identifiers": {
-                      "vendor_id": 14,
-                      "product_id": 13330
-                    }
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "1",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_6",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_6",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "l",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_7",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_7",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "5",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_8",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_8",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "u",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_9",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_9",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "6",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_hyphen",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_hyphen",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "w",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_enter",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_enter",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "up_arrow",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: keypad_plus",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_plus",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "4",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: equal_sign",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "equal_sign",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: escape",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: delete_or_backspace",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: comma",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "comma",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: al_calculator",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "al_calculator",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: 5",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "5",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: 0",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "0",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad: 9",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "9",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
                   }
                 ],
                 "to": [
@@ -506,6 +1412,286 @@
                   },
                   {
                     "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: device/clip",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "grave_accent_and_tilde",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_shift"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: hidePanels (cmd+tilda)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "grave_accent_and_tilde",
+                  "modifiers": {
+                    "mandatory": [
+                      "shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "ableton_typing_mode",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "key_code": "8",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  },
+                  {
+                    "key_code": "w",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: hide/esc",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "backslash",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "ableton_typing_mode",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "key_code": "8",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  },
+                  {
+                    "key_code": "w",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: render",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "r",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "r",
+                    "modifiers": [
+                      "left_command",
+                      "left_shift"
+                    ]
+                  },
+                  {
+                    "set_variable": {
+                      "name": "ableton_typing_mode",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "7",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: save",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "s",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  },
+                  {
+                    "set_variable": {
+                      "name": "ableton_typing_mode",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "7",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ableton: save as",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "s",
+                    "modifiers": [
+                      "left_command",
+                      "left_shift"
+                    ]
+                  },
+                  {
+                    "set_variable": {
+                      "name": "ableton_typing_mode",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "7",
+                    "modifiers": [
+                      "left_command",
+                      "left_option",
+                      "left_control"
+                    ]
                   }
                 ]
               }
@@ -683,51 +1869,6 @@
                   },
                   {
                     "key_code": "7",
-                    "modifiers": [
-                      "left_command",
-                      "left_option",
-                      "left_control"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "ableton: end search / toggle browser",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "backslash",
-                  "modifiers": {
-                    "mandatory": []
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "5",
-                    "modifiers": [
-                      "left_command",
-                      "left_option"
-                    ]
-                  },
-                  {
-                    "set_variable": {
-                      "name": "ableton_typing_mode",
-                      "value": 0
-                    }
-                  },
-                  {
-                    "key_code": "8",
                     "modifiers": [
                       "left_command",
                       "left_option",
@@ -1161,6 +2302,40 @@
             ]
           },
           {
+            "description": "ableton: toggle follow",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "f"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "ableton: quantize",
             "manipulators": [
               {
@@ -1231,7 +2406,7 @@
             ]
           },
           {
-            "description": "ableton: redo",
+            "description": "ableton: null",
             "manipulators": [
               {
                 "type": "basic",
@@ -1256,23 +2431,107 @@
                 ],
                 "to": [
                   {
-                    "key_code": "z",
-                    "modifiers": [
-                      "left_command",
-                      "left_shift"
-                    ]
+                    "key_code": "0"
                   }
                 ]
               }
             ]
           },
           {
-            "description": "ableton: sends",
+            "description": "ableton: cut and paste",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
                   "key_code": "q",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "double_tap_q_",
+                    "value": 1
+                  },
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "x",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "q",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "variable_unless",
+                    "name": "double_tap_q_",
+                    "value": 1
+                  },
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "double_tap_q_",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "double_tap_q_",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "double_tap_q_",
+                        "value": 0
+                      }
+                    },
+                    {
+                      "key_code": "c",
+                      "modifiers": [
+                        "left_command"
+                      ]
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 150
+                }
+              }
+            ]
+          },
+          {
+            "description": "ableton: paste",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "w",
                   "modifiers": {
                     "mandatory": []
                   }
@@ -1292,10 +2551,9 @@
                 ],
                 "to": [
                   {
-                    "key_code": "s",
+                    "key_code": "v",
                     "modifiers": [
-                      "left_command",
-                      "left_option"
+                      "left_command"
                     ]
                   }
                 ]
@@ -1329,42 +2587,6 @@
                 "to": [
                   {
                     "key_code": "r",
-                    "modifiers": [
-                      "left_command",
-                      "left_option"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "ableton: inputs",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "w",
-                  "modifiers": {
-                    "mandatory": []
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "ableton_typing_mode",
-                    "value": 0
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "i",
                     "modifiers": [
                       "left_command",
                       "left_option"
@@ -1592,7 +2814,7 @@
                   "key_code": "k",
                   "modifiers": {
                     "mandatory": [
-                      "command"
+                      "shift"
                     ]
                   }
                 },
@@ -1865,6 +3087,44 @@
                 ]
               }
             ]
+          },
+          {
+            "description": "ableton: scale",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {
+                    "mandatory": [
+                      "shift"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "left_command",
+                      "left_shift"
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -2101,6 +3361,17 @@
             "vendor_id": 27129
           },
           "ignore": true
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 20565,
+            "vendor_id": 12815
+          },
+          "ignore": false,
+          "manipulate_caps_lock_led": false,
+          "simple_modifications": []
         }
       ],
       "fn_function_keys": [

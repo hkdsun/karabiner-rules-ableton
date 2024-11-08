@@ -142,7 +142,18 @@ export const globals = {
             "vendor_id": 27129
         },
         "ignore": true
-    }
+    },
+    {
+        "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 20565,
+            "vendor_id": 12815
+        },
+        "ignore": false,
+        "manipulate_caps_lock_led": false,
+        "simple_modifications": []
+    },
   ],
   "fn_function_keys": [
       {

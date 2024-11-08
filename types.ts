@@ -44,7 +44,7 @@ type DeviceCondition = {
     | "device_unless"
     | "device_exists_if"
     | "device_exists_unless";
-  identifiers: Identifiers;
+  identifiers: Identifiers[];
   description?: string;
 };
 
@@ -121,6 +121,7 @@ type ModifiersKeys =
 
 export interface From {
   key_code?: KeyCode;
+  consumer_key_code?: ConsumerKeyCode;
   simultaneous?: SimultaneousFrom[];
   simultaneous_options?: SimultaneousOptions;
   modifiers?: Modifiers;
@@ -141,6 +142,7 @@ export interface To {
   };
   lazy?: boolean;
   mouse_key?: MouseKey;
+  repeat?: boolean;
   pointing_button?: string;
   /**
    * Power Management plugin
@@ -166,6 +168,11 @@ export interface MouseKey {
 export interface SoftwareFunction {
   iokit_power_management_sleep_system?: {};
 }
+
+export type ConsumerKeyCode =
+  | "volume_increment"
+  | "volume_decrement"
+  | "mute"
 
 export type KeyCode =
   | "caps_lock"
@@ -447,4 +454,5 @@ export type KeyCode =
   | "vk_consumer_next"
   //   not_from: true
   | "volume_down"
+  | "al_calculator"
   | "volume_up";
