@@ -47,10 +47,10 @@ function abletonRule(key_code: KeyCode, to: To[], modifiers: Modifiers = {}, byp
   ];
 }
 
-function abletonDoubleTapRule(key_code: KeyCode, toSingleTap: To[] = [], toDoubleTap: To[] = [], modifiers: Modifiers = {}, delayMs: number = 500): Manipulator[] {
+function abletonDoubleTapRule(key_code: KeyCode, toSingleTap: To[] = [], toDoubleTap: To[] = [], modifiers: Modifiers = {}, delayMs: number = 500, bypass_typing_mode = false): Manipulator[] {
   const modifiersString = modifiers.mandatory ? modifiers.mandatory.join("_") : "";
   const conditionVarName = `double_tap_${key_code}_${modifiersString}`;
-  return [
+  var manipulators: Manipulator[] = [
     {
       type: "basic",
       from: {
@@ -67,11 +67,6 @@ function abletonDoubleTapRule(key_code: KeyCode, toSingleTap: To[] = [], toDoubl
           type: "frontmost_application_if",
           bundle_identifiers: ["com.ableton.live"],
         },
-        {
-          type: "variable_if",
-          name: "ableton_typing_mode",
-          value: 0,
-        }
       ],
       to: toDoubleTap,
     },
@@ -91,11 +86,6 @@ function abletonDoubleTapRule(key_code: KeyCode, toSingleTap: To[] = [], toDoubl
           type: "frontmost_application_if",
           bundle_identifiers: ["com.ableton.live"],
         },
-        {
-          type: "variable_if",
-          name: "ableton_typing_mode",
-          value: 0,
-        }
       ],
       to: [
         {
@@ -129,6 +119,25 @@ function abletonDoubleTapRule(key_code: KeyCode, toSingleTap: To[] = [], toDoubl
       }
     }
   ];
+
+  if (!bypass_typing_mode) {
+    if (manipulators[0].conditions) {
+      manipulators[0].conditions.push({
+        type: "variable_if",
+        name: "ableton_typing_mode",
+        value: 0,
+      });
+    }
+    if (manipulators[1].conditions) {
+      manipulators[1].conditions.push({
+        type: "variable_if",
+        name: "ableton_typing_mode",
+        value: 0,
+      });
+    }
+  }
+
+  return manipulators;
 }
 
 
@@ -143,7 +152,7 @@ const toHidePanels = [
   // ...toAbletonHotkey("p"),
 ]
 
-const abletonHidePanels = abletonDoubleTapRule("backslash", toShiftHotkey("tab"), toHidePanels, {}, 200)
+const abletonHidePanels = abletonDoubleTapRule("backslash", toShiftHotkey("tab"), toHidePanels, {}, 200, true)
 
 const abletonRename = abletonRule("r", [
   ...toCmdHotkey("r"),
@@ -159,7 +168,7 @@ const abletonEscape = abletonDoubleTapRule("escape", [
   { key_code: "escape" },
 ], [
   ...deactivateTypingMode,
-], {}, 200)
+], {}, 200, true)
 
 const abletonCmdF = abletonRule("f", [
   ...toCmdHotkey("f"),

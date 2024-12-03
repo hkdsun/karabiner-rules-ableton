@@ -1358,11 +1358,6 @@
                     "bundle_identifiers": [
                       "com.ableton.live"
                     ]
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "ableton_typing_mode",
-                    "value": 0
                   }
                 ],
                 "to": [
@@ -1399,11 +1394,6 @@
                     "bundle_identifiers": [
                       "com.ableton.live"
                     ]
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "ableton_typing_mode",
-                    "value": 0
                   }
                 ],
                 "to": [
@@ -1615,11 +1605,6 @@
                     "bundle_identifiers": [
                       "com.ableton.live"
                     ]
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "ableton_typing_mode",
-                    "value": 0
                   }
                 ],
                 "to": [
@@ -1666,11 +1651,6 @@
                     "bundle_identifiers": [
                       "com.ableton.live"
                     ]
-                  },
-                  {
-                    "type": "variable_if",
-                    "name": "ableton_typing_mode",
-                    "value": 0
                   }
                 ],
                 "to": [
