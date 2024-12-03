@@ -66,6 +66,11 @@ function abletonDoubleTapRule(key_code: KeyCode, toSingleTap: To[] = [], toDoubl
         {
           type: "frontmost_application_if",
           bundle_identifiers: ["com.ableton.live"],
+        },
+        {
+          type: "variable_if",
+          name: "ableton_typing_mode",
+          value: 0,
         }
       ],
       to: toDoubleTap,
@@ -85,6 +90,11 @@ function abletonDoubleTapRule(key_code: KeyCode, toSingleTap: To[] = [], toDoubl
         {
           type: "frontmost_application_if",
           bundle_identifiers: ["com.ableton.live"],
+        },
+        {
+          type: "variable_if",
+          name: "ableton_typing_mode",
+          value: 0,
         }
       ],
       to: [
@@ -133,7 +143,7 @@ const toHidePanels = [
   // ...toAbletonHotkey("p"),
 ]
 
-const abletonHidePanels = abletonRule("backslash", toHidePanels, {}, true)
+const abletonHidePanels = abletonDoubleTapRule("backslash", toShiftHotkey("tab"), toHidePanels, {}, 200)
 
 const abletonRename = abletonRule("r", [
   ...toCmdHotkey("r"),
@@ -145,22 +155,16 @@ const abletonRenameEnd = abletonRule("return_or_enter", [
   { key_code: "return_or_enter" },
 ], {}, true)
 
-const abletonEscape = abletonRule("escape", [
-  ...deactivateTypingMode,
+const abletonEscape = abletonDoubleTapRule("escape", [
   { key_code: "escape" },
-  // ...toAbletonHotkey("5"),
-], {}, true)
+], [
+  ...deactivateTypingMode,
+], {}, 200)
 
 const abletonCmdF = abletonRule("f", [
   ...toCmdHotkey("f"),
   ...activateTypingMode,
 ], { mandatory: ["left_command"] }, true)
-
-const abletonLeftControl = abletonRule("left_control", [
-  ...deactivateTypingMode,
-  { key_code: "left_control" },
-  ...toAbletonHotkey("5"),
-], {}, true)
 
 const abletonLetterI = abletonRule("i", [...activateTypingMode])
 
@@ -181,14 +185,15 @@ const abletonRender = abletonRule("r", [
 ], { mandatory: ["left_command", "left_shift"] }, true)
 
 
-const cutRule = abletonDoubleTapRule("q", toCmdHotkey("c"), toCmdHotkey("x"), {}, 150)
+const cutRule = abletonDoubleTapRule("q", toCmdHotkey("c"), toCmdHotkey("x"), {}, 200)
+
+const tildaRule = abletonDoubleTapRule("grave_accent_and_tilde", toShiftHotkey("tab"), toAbletonHotkey("b"), {}, 200)
 
 export const abletonRules = [
   { description: "ableton: right_control to ableton prefix", manipulators: abletonRule("right_control", [{ key_code: "left_command", modifiers: ["left_option"] }], {}, true)},
   { description: "ableton: insert (enter typing mode)", manipulators: abletonLetterI},
-  { description: "ableton: control (exits typing mode)", manipulators: abletonLeftControl},
   { description: "ableton: escape (exits typing mode)", manipulators: abletonEscape},
-  { description: "ableton: device/clip", manipulators: abletonRule("grave_accent_and_tilde", toShiftHotkey("tab")) },
+  { description: "ableton: device/clip", manipulators: tildaRule },
   { description: "ableton: hidePanels (cmd+tilda)", manipulators: abletonRule("grave_accent_and_tilde", toHidePanels, { mandatory: ["shift"] }) },
   { description: "ableton: hide/esc", manipulators: abletonHidePanels },
   { description: "ableton: render", manipulators: abletonRender },

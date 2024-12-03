@@ -426,7 +426,7 @@
                 "conditions": [],
                 "to": [
                   {
-                    "key_code": "r",
+                    "key_code": "t",
                     "modifiers": [
                       "left_control",
                       "left_option",
@@ -453,14 +453,21 @@
                 "conditions": [],
                 "to": [
                   {
-                    "key_code": "left_command"
+                    "key_code": "r",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad ableton: tab",
+            "description": "numpad: tab",
             "manipulators": [
               {
                 "type": "basic",
@@ -470,12 +477,6 @@
                 },
                 "conditions": [
                   {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  },
-                  {
                     "type": "device_if",
                     "identifiers": [
                       {
@@ -487,14 +488,21 @@
                 ],
                 "to": [
                   {
-                    "key_code": "h"
+                    "key_code": "s",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad ableton: delete_forward",
+            "description": "numpad: delete_forward",
             "manipulators": [
               {
                 "type": "basic",
@@ -504,12 +512,6 @@
                 },
                 "conditions": [
                   {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  },
-                  {
                     "type": "device_if",
                     "identifiers": [
                       {
@@ -521,14 +523,21 @@
                 ],
                 "to": [
                   {
-                    "key_code": "spacebar"
+                    "key_code": "a",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad ableton: delete_or_backspace",
+            "description": "numpad: delete_or_backspace",
             "manipulators": [
               {
                 "type": "basic",
@@ -538,12 +547,6 @@
                 },
                 "conditions": [
                   {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  },
-                  {
                     "type": "device_if",
                     "identifiers": [
                       {
@@ -555,7 +558,14 @@
                 ],
                 "to": [
                   {
-                    "key_code": "spacebar"
+                    "key_code": "a",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command",
+                      "left_shift"
+                    ],
+                    "repeat": true
                   }
                 ]
               }
@@ -1329,106 +1339,20 @@
             ]
           },
           {
-            "description": "ableton: control (exits typing mode)",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "left_control",
-                  "modifiers": {
-                    "mandatory": []
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "ableton_typing_mode",
-                      "value": 0
-                    }
-                  },
-                  {
-                    "key_code": "8",
-                    "modifiers": [
-                      "left_command",
-                      "left_option",
-                      "left_control"
-                    ]
-                  },
-                  {
-                    "key_code": "left_control"
-                  },
-                  {
-                    "key_code": "5",
-                    "modifiers": [
-                      "left_command",
-                      "left_option"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "description": "ableton: escape (exits typing mode)",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
                   "key_code": "escape",
-                  "modifiers": {
-                    "mandatory": []
-                  }
+                  "modifiers": {}
                 },
                 "conditions": [
                   {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "ableton_typing_mode",
-                      "value": 0
-                    }
+                    "type": "variable_if",
+                    "name": "double_tap_escape_",
+                    "value": 1
                   },
-                  {
-                    "key_code": "8",
-                    "modifiers": [
-                      "left_command",
-                      "left_option",
-                      "left_control"
-                    ]
-                  },
-                  {
-                    "key_code": "escape"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "ableton: device/clip",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "grave_accent_and_tilde",
-                  "modifiers": {
-                    "mandatory": []
-                  }
-                },
-                "conditions": [
                   {
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
@@ -1443,12 +1367,176 @@
                 ],
                 "to": [
                   {
-                    "key_code": "tab",
+                    "set_variable": {
+                      "name": "ableton_typing_mode",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "key_code": "8",
                     "modifiers": [
-                      "left_shift"
+                      "left_command",
+                      "left_option",
+                      "left_control"
                     ]
                   }
                 ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "variable_unless",
+                    "name": "double_tap_escape_",
+                    "value": 1
+                  },
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "double_tap_escape_",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "double_tap_escape_",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "double_tap_escape_",
+                        "value": 0
+                      }
+                    },
+                    {
+                      "key_code": "escape"
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 200
+                }
+              }
+            ]
+          },
+          {
+            "description": "ableton: device/clip",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "grave_accent_and_tilde",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "double_tap_grave_accent_and_tilde_",
+                    "value": 1
+                  },
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "b",
+                    "modifiers": [
+                      "left_command",
+                      "left_option"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "grave_accent_and_tilde",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "variable_unless",
+                    "name": "double_tap_grave_accent_and_tilde_",
+                    "value": 1
+                  },
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "double_tap_grave_accent_and_tilde_",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "double_tap_grave_accent_and_tilde_",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "double_tap_grave_accent_and_tilde_",
+                        "value": 0
+                      }
+                    },
+                    {
+                      "key_code": "tab",
+                      "modifiers": [
+                        "left_shift"
+                      ]
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 200
+                }
               }
             ]
           },
@@ -1514,16 +1602,24 @@
                 "type": "basic",
                 "from": {
                   "key_code": "backslash",
-                  "modifiers": {
-                    "mandatory": []
-                  }
+                  "modifiers": {}
                 },
                 "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "double_tap_backslash_",
+                    "value": 1
+                  },
                   {
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
                       "com.ableton.live"
                     ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
                   }
                 ],
                 "to": [
@@ -1552,6 +1648,66 @@
                     "repeat": true
                   }
                 ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "backslash",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "variable_unless",
+                    "name": "double_tap_backslash_",
+                    "value": 1
+                  },
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.ableton.live"
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "double_tap_backslash_",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "double_tap_backslash_",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "double_tap_backslash_",
+                        "value": 0
+                      }
+                    },
+                    {
+                      "key_code": "tab",
+                      "modifiers": [
+                        "left_shift"
+                      ]
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 200
+                }
               }
             ]
           },
@@ -2457,6 +2613,11 @@
                     "bundle_identifiers": [
                       "com.ableton.live"
                     ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
                   }
                 ],
                 "to": [
@@ -2485,6 +2646,11 @@
                     "bundle_identifiers": [
                       "com.ableton.live"
                     ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "ableton_typing_mode",
+                    "value": 0
                   }
                 ],
                 "to": [
@@ -2520,7 +2686,7 @@
                   ]
                 },
                 "parameters": {
-                  "basic.to_delayed_action_delay_milliseconds": 150
+                  "basic.to_delayed_action_delay_milliseconds": 200
                 }
               }
             ]
@@ -3133,7 +3299,11 @@
                 "type": "basic",
                 "from": {
                   "key_code": "1",
-                  "modifiers": {}
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ]
+                  }
                 },
                 "conditions": [
                   {
@@ -3165,7 +3335,11 @@
                 "type": "basic",
                 "from": {
                   "key_code": "2",
-                  "modifiers": {}
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ]
+                  }
                 },
                 "conditions": [
                   {
@@ -3197,7 +3371,11 @@
                 "type": "basic",
                 "from": {
                   "key_code": "3",
-                  "modifiers": {}
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ]
+                  }
                 },
                 "conditions": [
                   {
@@ -3229,7 +3407,11 @@
                 "type": "basic",
                 "from": {
                   "key_code": "4",
-                  "modifiers": {}
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ]
+                  }
                 },
                 "conditions": [
                   {
@@ -3247,38 +3429,6 @@
                       "left_option",
                       "left_command"
                     ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "totalmix: switch window",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "tab",
-                  "modifiers": {}
-                },
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "de.rme-audio.TotalmixFX"
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "2",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command",
-                      "left_shift"
-                    ],
-                    "repeat": false
                   }
                 ]
               }

@@ -60,11 +60,11 @@ export const globalNumpadRules: KarabinerRules[] = [
 
   // scrubbing row
   consumerKeyRule("volume_decrement", toSuperHyper("e")) ,
-  consumerKeyRule("volume_increment", toSuperHyper("r")) ,
-  consumerKeyRule("mute", toPassThroughHotKey("left_command")) ,
-  numpadAbletonRule("tab"           , toPassThroughHotKey("h")) ,
-  numpadAbletonRule("delete_forward", toPassThroughHotKey("spacebar")) ,
-  numpadAbletonRule("delete_or_backspace", toPassThroughHotKey("spacebar")) ,
+  consumerKeyRule("volume_increment", toSuperHyper("t")) ,
+  consumerKeyRule("mute", toSuperHyper("r")) ,
+  numpadRule("tab"           , toSuperHyper("s")) ,
+  numpadRule("delete_forward", toSuperHyper("a")) ,
+  numpadRule("delete_or_backspace", toSuperHyper("a")) ,
 
   // Regular hotkeys
   numpadRule("keypad_0"                  , toSuperHyper("2", false)) , // bounce window
