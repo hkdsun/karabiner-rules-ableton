@@ -69,12 +69,12 @@ export const globalNumpadRules: KarabinerRules[] = [
   // Regular hotkeys
   numpadRule("keypad_0"                  , toSuperHyper("2", false)) , // bounce window
   numpadRule("keypad_period"             , toSuperHyper("2")) , // bounce mouse
-  numpadRule("keypad_1"                  , spaceLeft)   , // navigate spaces left
-  numpadRule("keypad_2"                  , toHyper("4")) , // fullscreen toggle
-  numpadRule("keypad_3"                  , spaceRight)  , // navigate spaces right
-  numpadRule("keypad_4"                  , toHyper("h")), // snap left
-  numpadRule("keypad_5"                  , toHyper("1")), // maximize
-  numpadRule("keypad_6"                  , toHyper("l")), // snap right
+  numpadRule("keypad_4"                  , spaceLeft)   , // navigate spaces left
+  numpadRule("keypad_5"                  , toHyper("4")) , // fullscreen toggle
+  numpadRule("keypad_6"                  , spaceRight)  , // navigate spaces right
+  numpadRule("keypad_1"                  , toHyper("h")), // snap left
+  numpadRule("keypad_2"                  , toHyper("1")), // maximize
+  numpadRule("keypad_3"                  , toHyper("l")), // snap right
   numpadRule("keypad_7"                  , toHyper("5")), // focus secondary screen (left)
   numpadRule("keypad_8"                  , toHyper("u")), // bounce window
   numpadRule("keypad_9"                  , toHyper("6")), // focus primary screen (right)

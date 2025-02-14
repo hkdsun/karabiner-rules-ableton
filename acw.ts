@@ -29,6 +29,15 @@ export function toCmdHotkey(key_code: KeyCode): To[] {
   ];
 }
 
+export function toCmdAltHotkey(key_code: KeyCode): To[] {
+  return [
+    {
+      key_code,
+      modifiers: ["left_command", "left_option"],
+    },
+  ];
+}
+
 export function toCmdShiftHotkey(key_code: KeyCode): To[] {
   return [
     {

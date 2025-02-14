@@ -152,7 +152,7 @@ const toHidePanels = [
   // ...toAbletonHotkey("p"),
 ]
 
-const abletonHidePanels = abletonDoubleTapRule("backslash", toShiftHotkey("tab"), toHidePanels, {}, 200, true)
+const abletonHidePanels = abletonRule("backslash", toHidePanels, {}, true)
 
 const abletonRename = abletonRule("r", [
   ...toCmdHotkey("r"),
@@ -172,6 +172,11 @@ const abletonEscape = abletonDoubleTapRule("escape", [
 
 const abletonCmdF = abletonRule("f", [
   ...toCmdHotkey("f"),
+  ...activateTypingMode,
+], { mandatory: ["left_command"] }, true)
+
+const abletonCmdSpace = abletonRule("spacebar", [
+  ...toCmdHotkey("spacebar"),
   ...activateTypingMode,
 ], { mandatory: ["left_command"] }, true)
 
@@ -206,12 +211,13 @@ export const abletonRules = [
   { description: "ableton: hidePanels (cmd+tilda)", manipulators: abletonRule("grave_accent_and_tilde", toHidePanels, { mandatory: ["shift"] }) },
   { description: "ableton: hide/esc", manipulators: abletonHidePanels },
   { description: "ableton: render", manipulators: abletonRender },
-  { description: "ableton: save", manipulators: abletonCmdS },
+  // { description: "ableton: save", manipulators: abletonCmdS },
   { description: "ableton: save as", manipulators: abletonCmdShiftS },
   { description: "ableton: rename", manipulators: abletonRename },
   { description: "ableton: enter (exits typing mode)", manipulators: abletonRenameEnd },
   { description: "ableton: search", manipulators: abletonSearch },
   { description: "ableton: cmd-f", manipulators: abletonCmdF },
+  { description: "ableton: cmd-space", manipulators: abletonCmdSpace },
   { description: "ableton: split", manipulators: abletonRule("e", toCmdHotkey("e")) },
   { description: "ableton: clip", manipulators: abletonRule("open_bracket", toAbletonHotkey("3")) },
   { description: "ableton: fullclip", manipulators: abletonRule("quote", toAbletonHotkey("e")) },

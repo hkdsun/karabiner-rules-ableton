@@ -5,7 +5,7 @@ import { abletonRules } from "./ableton";
 import { biduleRules } from "./bidule";
 import { globalNumpadRules } from "./numpad";
 import { totalmixRules } from "./totalmix";
-
+import { swinsianRules } from "./swinsian";
 
 const hyperKey: Manipulator[] = [{
     type: "basic",
@@ -32,6 +32,7 @@ const rules: KarabinerRules[] = [
   ...globalNumpadRules,
   ...abletonRules,
   ...totalmixRules,
+  ...swinsianRules,
 ];
 
 fs.writeFileSync(
