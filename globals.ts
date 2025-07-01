@@ -110,6 +110,7 @@ export const globals = {
     {
         "identifiers": {
             "is_keyboard": true,
+            "is_pointing_device": true,
             "product_id": 20519,
             "vendor_id": 12625
         },
