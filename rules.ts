@@ -6,6 +6,7 @@ import { biduleRules } from "./bidule";
 import { globalNumpadRules } from "./numpad";
 import { totalmixRules } from "./totalmix";
 import { swinsianRules } from "./swinsian";
+import { renoiseRules } from "./renoise";
 
 const hyperKey: Manipulator[] = [{
     type: "basic",
@@ -32,6 +33,7 @@ const rules: KarabinerRules[] = [
   ...globalNumpadRules,
   ...abletonRules,
   ...totalmixRules,
+  ...renoiseRules,
   ...swinsianRules,
 ];
 

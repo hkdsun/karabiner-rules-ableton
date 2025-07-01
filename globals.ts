@@ -97,33 +97,27 @@ export const globals = {
     {
         "identifiers": {
             "is_keyboard": true,
-            "product_id": 4137,
-            "vendor_id": 39658
+            "product_id": 20518,
+            "vendor_id": 12625
         },
         "simple_modifications": [
             {
                 "from": { "key_code": "escape" },
                 "to": [{ "key_code": "grave_accent_and_tilde" }]
-            },
+            }
+        ]
+    },
+    {
+        "identifiers": {
+            "is_keyboard": true,
+            "product_id": 20519,
+            "vendor_id": 12625
+        },
+        "ignore": false,
+        "simple_modifications": [
             {
-                "from": { "key_code": "home" },
-                "to": [{ "key_code": "delete_forward" }]
-            },
-            {
-                "from": { "key_code": "delete_forward" },
-                "to": [{ "key_code": "home" }]
-            },
-            {
-                "from": { "key_code": "left_command" },
-                "to": [{ "key_code": "left_option" }]
-            },
-            {
-                "from": { "key_code": "left_option" },
-                "to": [{ "key_code": "left_command" }]
-            },
-            {
-                "from": { "key_code": "right_option" },
-                "to": [{ "key_code": "right_command" }]
+                "from": { "key_code": "escape" },
+                "to": [{ "key_code": "grave_accent_and_tilde" }]
             }
         ]
     },
