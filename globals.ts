@@ -104,6 +104,18 @@ export const globals = {
             {
                 "from": { "key_code": "escape" },
                 "to": [{ "key_code": "grave_accent_and_tilde" }]
+            },
+            {
+                "from": { "key_code": "left_command" },
+                "to": [{ "key_code": "left_option" }]
+            },
+            {
+                "from": { "key_code": "left_option" },
+                "to": [{ "key_code": "left_command" }]
+            },
+            {
+                "from": { "key_code": "right_option" },
+                "to": [{ "key_code": "right_command" }]
             }
         ]
     },
@@ -119,6 +131,22 @@ export const globals = {
             {
                 "from": { "key_code": "escape" },
                 "to": [{ "key_code": "grave_accent_and_tilde" }]
+            },
+            {
+                "from": { "key_code": "escape" },
+                "to": [{ "key_code": "grave_accent_and_tilde" }]
+            },
+            {
+                "from": { "key_code": "left_command" },
+                "to": [{ "key_code": "left_option" }]
+            },
+            {
+                "from": { "key_code": "left_option" },
+                "to": [{ "key_code": "left_command" }]
+            },
+            {
+                "from": { "key_code": "right_option" },
+                "to": [{ "key_code": "right_command" }]
             }
         ]
     },

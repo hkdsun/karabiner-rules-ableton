@@ -37,6 +37,7 @@ const rules: KarabinerRules[] = [
   ...swinsianRules,
 ];
 
+
 fs.writeFileSync(
   "karabiner.json",
   JSON.stringify(
