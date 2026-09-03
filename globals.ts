@@ -44,6 +44,28 @@ export const globals = {
             }
         ]
     },
+        {
+        "identifiers": {
+            "is_keyboard": true,
+            "product_id": 12290,
+            "vendor_id": 14000
+        },
+        "manipulate_caps_lock_led": false,
+        "simple_modifications": [
+            {
+                "from": { "key_code": "left_command" },
+                "to": [{ "key_code": "left_option" }]
+            },
+            {
+                "from": { "key_code": "left_option" },
+                "to": [{ "key_code": "left_command" }]
+            },
+            {
+                "from": { "key_code": "right_option" },
+                "to": [{ "key_code": "right_command" }]
+            }
+        ]
+    },
     {
         "identifiers": {
             "is_keyboard": true,
