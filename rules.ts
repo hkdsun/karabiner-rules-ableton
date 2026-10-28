@@ -3,7 +3,8 @@ import { KarabinerRules, Manipulator, Modifiers } from "./types";
 import { globals } from "./globals";
 import { abletonRules } from "./ableton";
 import { biduleRules } from "./bidule";
-import { globalNumpadRules } from "./numpad";
+import { captureOneRules } from "./captureone";
+import { photoshopRules } from "./photoshop";
 import { totalmixRules } from "./totalmix";
 import { swinsianRules } from "./swinsian";
 import { renoiseRules } from "./renoise";
@@ -30,7 +31,8 @@ const rules: KarabinerRules[] = [
   { description: "hyper key",  manipulators: hyperKey },
   { description: "super hyper key",  manipulators: superHyperKey },
   ...biduleRules,
-  ...globalNumpadRules,
+  ...captureOneRules,
+  ...photoshopRules,
   ...abletonRules,
   ...totalmixRules,
   ...renoiseRules,

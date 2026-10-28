@@ -142,54 +142,29 @@
             ]
           },
           {
-            "description": "numpad ableton: keypad_hyphen",
+            "description": "capture one consumer key: volume_decrement",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "keypad_hyphen",
-                  "modifiers": {}
+                  "consumer_key_code": "volume_decrement",
+                  "modifiers": {
+                    "mandatory": []
+                  }
                 },
                 "conditions": [
                   {
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  },
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
+                      "com.captureone.captureone16"
                     ]
                   }
                 ],
                 "to": [
                   {
-                    "key_code": "w",
+                    "key_code": "left_arrow",
                     "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command",
-                      "left_shift"
-                    ],
-                    "repeat": true
-                  },
-                  {
-                    "set_variable": {
-                      "name": "ableton_typing_mode",
-                      "value": 0
-                    }
-                  },
-                  {
-                    "key_code": "8",
-                    "modifiers": [
-                      "left_command",
-                      "left_option",
-                      "left_control"
+                      "left_command"
                     ]
                   }
                 ]
@@ -197,37 +172,29 @@
             ]
           },
           {
-            "description": "numpad ableton: keypad_asterisk",
+            "description": "capture one consumer key: volume_increment",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "keypad_asterisk",
-                  "modifiers": {}
+                  "consumer_key_code": "volume_increment",
+                  "modifiers": {
+                    "mandatory": []
+                  }
                 },
                 "conditions": [
                   {
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  },
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
+                      "com.captureone.captureone16"
                     ]
                   }
                 ],
                 "to": [
                   {
-                    "key_code": "r",
+                    "key_code": "right_arrow",
                     "modifiers": [
-                      "left_command",
-                      "left_option"
+                      "left_command"
                     ]
                   }
                 ]
@@ -235,120 +202,7 @@
             ]
           },
           {
-            "description": "numpad ableton: keypad_slash",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "keypad_slash",
-                  "modifiers": {}
-                },
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  },
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "i",
-                    "modifiers": [
-                      "left_command",
-                      "left_option"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad ableton: keypad_num_lock",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "keypad_num_lock",
-                  "modifiers": {}
-                },
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  },
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "s",
-                    "modifiers": [
-                      "left_command",
-                      "left_option"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad ableton: keypad_plus",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "keypad_plus",
-                  "modifiers": {}
-                },
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "com.ableton.live"
-                    ]
-                  },
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "tab",
-                    "modifiers": [
-                      "left_shift"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad ableton: keypad_enter",
+            "description": "numpad capture one: keypad_enter",
             "manipulators": [
               {
                 "type": "basic",
@@ -360,7 +214,7 @@
                   {
                     "type": "frontmost_application_if",
                     "bundle_identifiers": [
-                      "com.ableton.live"
+                      "com.captureone.captureone16"
                     ]
                   },
                   {
@@ -375,107 +229,28 @@
                 ],
                 "to": [
                   {
-                    "key_code": "b",
-                    "modifiers": [
-                      "left_command",
-                      "left_option"
-                    ]
+                    "key_code": "q"
                   }
                 ]
               }
             ]
           },
           {
-            "description": "ableton consumer key: volume_decrement",
+            "description": "numpad capture one: keypad_plus",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "consumer_key_code": "volume_decrement",
-                  "modifiers": {
-                    "mandatory": []
-                  }
-                },
-                "conditions": [],
-                "to": [
-                  {
-                    "key_code": "e",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command",
-                      "left_shift"
-                    ],
-                    "repeat": true
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "ableton consumer key: volume_increment",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "consumer_key_code": "volume_increment",
-                  "modifiers": {
-                    "mandatory": []
-                  }
-                },
-                "conditions": [],
-                "to": [
-                  {
-                    "key_code": "t",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command",
-                      "left_shift"
-                    ],
-                    "repeat": true
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "ableton consumer key: mute",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "consumer_key_code": "mute",
-                  "modifiers": {
-                    "mandatory": []
-                  }
-                },
-                "conditions": [],
-                "to": [
-                  {
-                    "key_code": "r",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command",
-                      "left_shift"
-                    ],
-                    "repeat": true
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: tab",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "tab",
+                  "key_code": "keypad_plus",
                   "modifiers": {}
                 },
                 "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
                   {
                     "type": "device_if",
                     "identifiers": [
@@ -488,161 +263,14 @@
                 ],
                 "to": [
                   {
-                    "key_code": "s",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command",
-                      "left_shift"
-                    ],
-                    "repeat": true
+                    "key_code": "w"
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad: delete_forward",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "delete_forward",
-                  "modifiers": {}
-                },
-                "conditions": [
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "a",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command",
-                      "left_shift"
-                    ],
-                    "repeat": true
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: delete_or_backspace",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "delete_or_backspace",
-                  "modifiers": {}
-                },
-                "conditions": [
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "a",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command",
-                      "left_shift"
-                    ],
-                    "repeat": true
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: keypad_0",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "keypad_0",
-                  "modifiers": {}
-                },
-                "conditions": [
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "2",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command",
-                      "left_shift"
-                    ],
-                    "repeat": false
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: keypad_period",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "keypad_period",
-                  "modifiers": {}
-                },
-                "conditions": [
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "2",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command",
-                      "left_shift"
-                    ],
-                    "repeat": true
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: keypad_4",
+            "description": "numpad capture one: keypad_4",
             "manipulators": [
               {
                 "type": "basic",
@@ -652,6 +280,12 @@
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
                     "type": "device_if",
                     "identifiers": [
                       {
@@ -663,17 +297,14 @@
                 ],
                 "to": [
                   {
-                    "key_code": "left_arrow",
-                    "modifiers": [
-                      "left_control"
-                    ]
+                    "key_code": "a"
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad: keypad_5",
+            "description": "numpad capture one: keypad_5",
             "manipulators": [
               {
                 "type": "basic",
@@ -683,6 +314,12 @@
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
                     "type": "device_if",
                     "identifiers": [
                       {
@@ -694,19 +331,14 @@
                 ],
                 "to": [
                   {
-                    "key_code": "4",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command"
-                    ]
+                    "key_code": "s"
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad: keypad_6",
+            "description": "numpad capture one: keypad_6",
             "manipulators": [
               {
                 "type": "basic",
@@ -716,6 +348,12 @@
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
                     "type": "device_if",
                     "identifiers": [
                       {
@@ -727,17 +365,116 @@
                 ],
                 "to": [
                   {
-                    "key_code": "right_arrow",
-                    "modifiers": [
-                      "left_control"
-                    ]
+                    "key_code": "d"
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad: keypad_1",
+            "description": "numpad capture one: keypad_7",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_7",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "f"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad capture one: keypad_8",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_8",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "e"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad capture one: keypad_9",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_9",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "r"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad capture one: keypad_1",
             "manipulators": [
               {
                 "type": "basic",
@@ -747,6 +484,12 @@
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
                     "type": "device_if",
                     "identifiers": [
                       {
@@ -758,19 +501,14 @@
                 ],
                 "to": [
                   {
-                    "key_code": "h",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command"
-                    ]
+                    "key_code": "z"
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad: keypad_2",
+            "description": "numpad capture one: keypad_2",
             "manipulators": [
               {
                 "type": "basic",
@@ -779,6 +517,450 @@
                   "modifiers": {}
                 },
                 "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "b"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad capture one: keypad_3",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_3",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "n"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad capture one: keypad_0",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_0",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad capture one: keypad_period",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_period",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad capture one: keypad_num_lock",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_num_lock",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "v"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad capture one: keypad_slash",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_slash",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "x"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad capture one: keypad_asterisk",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_asterisk",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "c"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad capture one: keypad_hyphen",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_hyphen",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.captureone.captureone16"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "g"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "photoshop consumer key: volume_decrement",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "consumer_key_code": "volume_decrement",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "open_bracket"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "photoshop consumer key: volume_increment",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "consumer_key_code": "volume_increment",
+                  "modifiers": {
+                    "mandatory": []
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "close_bracket"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad photoshop: keypad_num_lock",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_num_lock",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "z",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad photoshop: keypad_slash",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_slash",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "z",
+                    "modifiers": [
+                      "left_command",
+                      "left_shift"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad photoshop: keypad_asterisk",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_asterisk",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "0",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad photoshop: keypad_hyphen",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_hyphen",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
                   {
                     "type": "device_if",
                     "identifiers": [
@@ -793,8 +975,6 @@
                   {
                     "key_code": "1",
                     "modifiers": [
-                      "left_control",
-                      "left_option",
                       "left_command"
                     ]
                   }
@@ -803,40 +983,7 @@
             ]
           },
           {
-            "description": "numpad: keypad_3",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "keypad_3",
-                  "modifiers": {}
-                },
-                "conditions": [
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "l",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: keypad_7",
+            "description": "numpad photoshop tool: keypad_7",
             "manipulators": [
               {
                 "type": "basic",
@@ -846,6 +993,70 @@
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "photoshop_numpad_tapped_keypad_7",
+                    "value": 1
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "l",
+                    "modifiers": [
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_7",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_7",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 300
+                }
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_7",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
                     "type": "device_if",
                     "identifiers": [
                       {
@@ -857,19 +1068,41 @@
                 ],
                 "to": [
                   {
-                    "key_code": "5",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command"
-                    ]
+                    "set_variable": {
+                      "name": "photoshop_numpad_tapped_keypad_7",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "l"
                   }
-                ]
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_7",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_7",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 300
+                }
               }
             ]
           },
           {
-            "description": "numpad: keypad_8",
+            "description": "numpad photoshop tool: keypad_8",
             "manipulators": [
               {
                 "type": "basic",
@@ -879,6 +1112,70 @@
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "photoshop_numpad_tapped_keypad_8",
+                    "value": 1
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "b",
+                    "modifiers": [
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_8",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_8",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 300
+                }
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_8",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
                     "type": "device_if",
                     "identifiers": [
                       {
@@ -890,19 +1187,41 @@
                 ],
                 "to": [
                   {
-                    "key_code": "u",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command"
-                    ]
+                    "set_variable": {
+                      "name": "photoshop_numpad_tapped_keypad_8",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "b"
                   }
-                ]
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_8",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_8",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 300
+                }
               }
             ]
           },
           {
-            "description": "numpad: keypad_9",
+            "description": "numpad photoshop tool: keypad_9",
             "manipulators": [
               {
                 "type": "basic",
@@ -912,6 +1231,12 @@
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
                     "type": "device_if",
                     "identifiers": [
                       {
@@ -919,32 +1244,57 @@
                         "product_id": 20565
                       }
                     ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "photoshop_numpad_tapped_keypad_9",
+                    "value": 1
                   }
                 ],
                 "to": [
                   {
-                    "key_code": "6",
+                    "key_code": "e",
                     "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command"
+                      "left_shift"
                     ]
                   }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: keypad_hyphen",
-            "manipulators": [
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_9",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_9",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 300
+                }
+              },
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "keypad_hyphen",
+                  "key_code": "keypad_9",
                   "modifiers": {}
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
                     "type": "device_if",
                     "identifiers": [
                       {
@@ -956,25 +1306,113 @@
                 ],
                 "to": [
                   {
-                    "key_code": "w",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "set_variable": {
+                      "name": "photoshop_numpad_tapped_keypad_9",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "e"
                   }
-                ]
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_9",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_9",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 300
+                }
               }
             ]
           },
           {
-            "description": "numpad: keypad_enter",
+            "description": "numpad photoshop tool: keypad_4",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "keypad_enter",
+                  "key_code": "keypad_4",
                   "modifiers": {}
                 },
                 "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "photoshop_numpad_tapped_keypad_4",
+                    "value": 1
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "j",
+                    "modifiers": [
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_4",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_4",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 300
+                }
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_4",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
                   {
                     "type": "device_if",
                     "identifiers": [
@@ -987,17 +1425,449 @@
                 ],
                 "to": [
                   {
-                    "key_code": "up_arrow",
-                    "modifiers": [
-                      "left_control"
+                    "set_variable": {
+                      "name": "photoshop_numpad_tapped_keypad_4",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "j"
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_4",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_4",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 300
+                }
+              }
+            ]
+          },
+          {
+            "description": "numpad photoshop tool: keypad_5",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_5",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
                     ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "photoshop_numpad_tapped_keypad_5",
+                    "value": 1
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "s",
+                    "modifiers": [
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_5",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_5",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 300
+                }
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_5",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "photoshop_numpad_tapped_keypad_5",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "s"
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_5",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_5",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 300
+                }
+              }
+            ]
+          },
+          {
+            "description": "numpad photoshop tool: keypad_6",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_6",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "photoshop_numpad_tapped_keypad_6",
+                    "value": 1
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers": [
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_6",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_6",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 300
+                }
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_6",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "photoshop_numpad_tapped_keypad_6",
+                      "value": 1
+                    }
+                  },
+                  {
+                    "key_code": "p"
+                  }
+                ],
+                "to_delayed_action": {
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_6",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "photoshop_numpad_tapped_keypad_6",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 300
+                }
+              }
+            ]
+          },
+          {
+            "description": "numpad photoshop: keypad_1",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_1",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "open_bracket"
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad: keypad_plus",
+            "description": "numpad photoshop: keypad_2",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_2",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "close_bracket"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad photoshop: keypad_3",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_3",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "x"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad photoshop: keypad_0",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_0",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "spacebar"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad photoshop: keypad_period",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_period",
+                  "modifiers": {}
+                },
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
+                    "type": "device_if",
+                    "identifiers": [
+                      {
+                        "vendor_id": 12815,
+                        "product_id": 20565
+                      }
+                    ]
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "left_command"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "numpad photoshop: keypad_plus",
             "manipulators": [
               {
                 "type": "basic",
@@ -1007,6 +1877,12 @@
                 },
                 "conditions": [
                   {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
+                    ]
+                  },
+                  {
                     "type": "device_if",
                     "identifiers": [
                       {
@@ -1018,55 +1894,28 @@
                 ],
                 "to": [
                   {
-                    "key_code": "4",
-                    "modifiers": [
-                      "left_control",
-                      "left_option",
-                      "left_command"
-                    ]
+                    "pointing_button": "button2"
                   }
                 ]
               }
             ]
           },
           {
-            "description": "numpad: equal_sign",
+            "description": "numpad photoshop: keypad_enter",
             "manipulators": [
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "equal_sign",
+                  "key_code": "keypad_enter",
                   "modifiers": {}
                 },
                 "conditions": [
                   {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                      "com.adobe.Photoshop"
                     ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "escape"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: escape",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "escape",
-                  "modifiers": {}
-                },
-                "conditions": [
+                  },
                   {
                     "type": "device_if",
                     "identifiers": [
@@ -1079,187 +1928,7 @@
                 ],
                 "to": [
                   {
-                    "key_code": "escape"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: delete_or_backspace",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "delete_or_backspace",
-                  "modifiers": {}
-                },
-                "conditions": [
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "escape"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: comma",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "comma",
-                  "modifiers": {}
-                },
-                "conditions": [
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "escape"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: al_calculator",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "al_calculator",
-                  "modifiers": {}
-                },
-                "conditions": [
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "escape"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: 5",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "5",
-                  "modifiers": {
-                    "mandatory": [
-                      "left_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "escape"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: 0",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "0",
-                  "modifiers": {
-                    "mandatory": [
-                      "left_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "escape"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "numpad: 9",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "9",
-                  "modifiers": {
-                    "mandatory": [
-                      "left_shift"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "vendor_id": 12815,
-                        "product_id": 20565
-                      }
-                    ]
-                  }
-                ],
-                "to": [
-                  {
-                    "key_code": "escape"
+                    "key_code": "left_option"
                   }
                 ]
               }
